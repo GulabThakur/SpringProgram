@@ -1,0 +1,26 @@
+<!DOCTYPE web-app 
+  >
+
+<web-app "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value></param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>springweb</servlet-name>
+        <servlet-class>controller.Test</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springweb</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
