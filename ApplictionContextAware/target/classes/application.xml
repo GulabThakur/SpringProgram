@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xsi:schemalocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean autowire="byName" class="com.bridgeit.model.Tringle" id="triangle"></bean>
+  <bean id="pointA" class="com.bridgeit.model.Points">
+  <property name="x" value="12"></property>
+   <property name="y" value="10"></property>
+  </bean>
+  <bean id="pointB" class="com.bridgeit.model.Points">
+  <property name="x" value="11"></property>
+   <property name="y" value="9"></property>
+  </bean>
+  
+  <bean id="pointC" class="com.bridgeit.model.Points">
+  <property name="x" value="8"></property>
+   <property name="y" value="7"></property>
+  </bean>
+
+</beans>
