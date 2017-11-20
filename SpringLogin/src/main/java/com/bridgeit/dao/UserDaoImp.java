@@ -1,26 +1,21 @@
 package com.bridgeit.dao;
 
-import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.bridgeit.bean.User;
+import org.springframework.orm.hibernate4.HibernateTemplate;
+
+import com.bridgeit.model.User;
+
 
 public class UserDaoImp implements UserDao{
-   JdbcTemplate template;
+	HibernateTemplate template;
+	public void setTemplate(HibernateTemplate temp) 
+	{
+		 this.template=temp;
+	}
 	public void ragistermethod(User usr) {
-			usr.setName(name);
+		template.save(usr);
 	}
 
-	public void login(User login) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public User store(User user) {
-		user.setName("");
-		user.setPassword("password");
-		user.setUserId(null);
-		String query="select * from user1 value";
-		return user;
-	}
-
+	
 }
