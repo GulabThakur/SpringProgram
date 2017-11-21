@@ -7,31 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
-	<h1>Add New Employee</h1>
-	<form:form method="post" action="save">
+	<h2 textalign="center">Welcome to login page</h2>
+	<form:form method="post" action="save1">
 		<table>
-			<tr>
-				<td>FirstName :</td>
-				<td><form:input path="fName" type="test" /></td>
-			</tr>
-			<tr>
-				<td>LastName :</td>
-				<td><form:input path="lName" type="test" /></td>
-			</tr>
-			<tr>
-				<td>Email :</td>
-				<td><form:input path="Email" type="email" /></td>
+
+			<td>Email :</td>
+			<td><form:input path="Email" type="email" /></td>
 			</tr>
 			<tr>
 				<td>Password :</td>
 				<td><form:input path="password" type="password" /></td>
-			</tr>
-			<tr>
-				<td>Conform :</td>
-				<td><form:input path="conformPassword" type="password" /></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -39,5 +25,6 @@
 			</tr>
 		</table>
 	</form:form>
+
 </body>
 </html>

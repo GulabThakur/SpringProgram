@@ -52,8 +52,6 @@
 			<artifactId>spring-tx</artifactId>
 			<version>4.3.9.RELEASE</version>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
 		<dependency>
 			<groupId>org.springframework</groupId>
