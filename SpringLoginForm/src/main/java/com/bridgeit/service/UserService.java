@@ -5,5 +5,5 @@ import com.bridgeit.model.UserModel;
 public interface UserService {
 	public void ragistre(UserModel user);
 
-	public UserModel singUp(String name, String password);
+	public String singUp(String name, String password);
 }

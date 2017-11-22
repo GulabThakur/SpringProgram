@@ -9,7 +9,7 @@
 <body>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 	<h2 textalign="center">Welcome to login page</h2>
-	<form:form method="post" action="save1">
+	<form:form method="get" action="save1">
 		<table>
 
 			<td>Email :</td>

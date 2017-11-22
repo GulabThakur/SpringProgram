@@ -1,6 +1,5 @@
 package com.bridgeit.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,11 +15,12 @@ public class UserServiceImp implements UserService {
 	private UserDao userDaoImp;
 
 	public void ragistre(UserModel user) {
+	
 		userDaoImp.signUp(user);
 	}
 
-	public UserModel singUp(String name, String password) {
-		UserModel status = userDaoImp.signIn(name, password);
+	public String singUp(String name, String password) {
+		String status = userDaoImp.signIn(name, password);
 		return status;
 	}
 }

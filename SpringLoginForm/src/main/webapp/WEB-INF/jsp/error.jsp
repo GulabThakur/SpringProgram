@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>error page</title>
 </head>
 <body>
 		<h3> Wrong your pass and email</h3>

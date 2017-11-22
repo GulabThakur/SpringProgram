@@ -1,11 +1,12 @@
 package com.bridgeit.dao;
 
-import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,19 +31,34 @@ public class UserDaoImp implements UserDao{
 		
 	}
 
-	public UserModel signIn(String Email, String password) {
+	public String signIn(String Email, String password) {
 		System.out.println("In Check login");
+		String persion = null;
 		Session session = sessionFactrory.openSession();
+		Criteria criteria=session.createCriteria(UserModel.class);
+		Criterion email=Restrictions.eq("Email", Email);
+		criteria.add(email);
+		UserModel user=(UserModel) criteria.uniqueResult();
 		Transaction transaction=session.beginTransaction();
-		//boolean userFound = false;
-		String SQL_QUERY =" from users where Email=? and password=?";
-		Query query = session.createQuery(SQL_QUERY);
-		query.setParameter(0,Email);
-		query.setParameter(1,password);
-		List<UserModel> user=query.list();
-		transaction.commit();
 		session.close();
-		return (UserModel) user;
+		if(user!=null) 
+		{
+			if(password.equals(user.getPassword())) 
+			{
+				persion=user.getfName();
+				System.out.println("Welcome"+persion);
+			}
+			else 
+			{
+				persion="password is wrong";
+				System.out.println(persion);
+			}
+		 }
+		System.out.println("Nicejkhh...........");
+		
+		
+			return persion;
+			
 	}
 
 }

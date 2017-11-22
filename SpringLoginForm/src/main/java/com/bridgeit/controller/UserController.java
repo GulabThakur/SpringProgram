@@ -10,13 +10,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.bridgeit.model.UserModel;
 import com.bridgeit.service.UserService;
+import com.bridgeit.validation.ValidationInf;
 
 @Controller
 public class UserController {
 	@Autowired
 	private UserService userServiceImp;
-	
-	
+	@Autowired
+	private ValidationInf validation;
 	@RequestMapping("/login")
 	public ModelAndView showform() {
 
@@ -25,9 +26,13 @@ public class UserController {
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute("user") UserModel user) {
-		
-		userServiceImp.ragistre(user);
-		return new ModelAndView("redirect:/view");
+		boolean status=validation.forSignUp(user);
+		if(status) 
+		{
+			userServiceImp.ragistre(user);
+			return new ModelAndView("redirect:/view");
+		}
+		return new ModelAndView("redirect:/login");
 	}
 
 	@RequestMapping("/view")

@@ -66,5 +66,7 @@
 	</beans:bean>
 	<beans:bean id="userServiceImp" class="com.bridgeit.service.UserServiceImp">
 	</beans:bean>
+	<beans:bean id="validation" class="com.bridgeit.validation.ValidationImp">
+	</beans:bean>
 
 </beans:beans>
