@@ -3,6 +3,7 @@
 	<name>loginAndRagistation</name>
 	<comment></comment>
 	<projects>
+		<project>RestCurudOperation</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

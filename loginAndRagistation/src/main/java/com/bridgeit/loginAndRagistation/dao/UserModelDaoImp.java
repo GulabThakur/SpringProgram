@@ -14,7 +14,7 @@ public class UserModelDaoImp implements IuserModelDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	@Override
+	
 	public void singUp(UserModel user) {
 		Session session=sessionFactory.openSession();
 		Transaction transaction=session.beginTransaction();
@@ -23,7 +23,7 @@ public class UserModelDaoImp implements IuserModelDao {
 		session.close();
 	}
 
-	@Override
+	
 	public String singIn(String email, String password) {
 		Session session=sessionFactory.openSession();
 		String persion=null;

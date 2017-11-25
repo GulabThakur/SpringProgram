@@ -10,13 +10,13 @@ public class UserModelServiceImp  implements IuserModelservice{
 	@Autowired
 	private IuserModelDao userModelDao;
 	
-	@Override
+	
 	public void singUp(UserModel user) {
 
 		userModelDao.singUp(user);
 	}
 
-	@Override
+	
 	public String logIn(String email, String password) {
 		return userModelDao.singIn(email, password);
 	}

@@ -33,7 +33,7 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
 	<beans:bean id="sessionFactory"
-		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
@@ -53,7 +53,7 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<beans:bean id="transactionManager"
-		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<beans:property name="sessionFactory" ref="sessionFactory" />
 	</beans:bean>
 
@@ -62,7 +62,9 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
 	</beans:bean>
 	<beans:bean id="userModelService" class="com.bridgeit.loginAndRagistation.service.UserModelServiceImp">
 	</beans:bean>
-	<!-- <beans:bean id="validation" class="com.bridgeit.validation.ValidationImp"> 
-		</beans:bean> -->
+	<beans:bean id="encode" class="com.bridgeit.loginAndRagistation.service.Encode">
+	</beans:bean>
+	<beans:bean id="validation" class="com.bridgeit.loginAndRagistation.validation.ValidationImp"> 
+		</beans:bean> 
 
 </beans:beans>
