@@ -14,21 +14,64 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
-
+		<!-- Bcryp jar -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>4.0.4.RELEASE</version>
-		</dependency> -->
+			<version>4.2.3.RELEASE</version>
+		</dependency>
+
+		<!-- close -->
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.shared/maven-dependency-tree -->
+		<dependency>
+			<groupId>org.apache.maven.shared</groupId>
+			<artifactId>maven-dependency-tree</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!--Email -->
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
+		<!-- close -->
+		<!-- Open token jar -->
+		<dependency>
+			<groupId>com.googlecode.jsontoken</groupId>
+			<artifactId>jsontoken</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.0.1.RELEASE</version>
+		</dependency>
+		<!-- Close jar -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<!-- <dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-web</artifactId> 
+			<version>4.0.4.RELEASE</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-		<!-- <dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>4.2.0.Final</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
+			<version>4.2.0.Final</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
@@ -100,6 +143,12 @@
 			<version>4.3.9.RELEASE</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.9.RELEASE</version>
+		</dependency>
 
 	</dependencies>
 	<build>

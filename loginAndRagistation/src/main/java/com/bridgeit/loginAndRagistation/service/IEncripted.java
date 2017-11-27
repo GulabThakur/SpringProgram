@@ -1,6 +1,14 @@
 package com.bridgeit.loginAndRagistation.service;
 
+/**
+ * @author GulabThakur
+ *
+ */
 public interface IEncripted {
-    public String get(String password);
-	
+	/**
+	 * @param password
+	 * @return this method using for convert the string into encode format
+	 */
+	public String get(String password);
+
 }

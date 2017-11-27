@@ -8,15 +8,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
-
+/**
+ * @author GulabThakur
+ * @this is my model class(pojo)
+ */
 @SuppressWarnings("serial")
 @Entity(name = "Restuser")
 public class UserModel implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-
+	private boolean isActive;
 	private String fName;
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 
 	private String lName;
 
